@@ -1,29 +1,27 @@
 function createStack() {
-  const stack = []
+  const array = []
 
   return {
-    push(x) {
-      stack.push(x)
+
+    push(item) {
+      array.push(item)
     },
     pop() {
-      if (stack.length === 0) {
-        return undefined
-      }
-      return stack.pop()
+      return array.pop()
     },
     peek() {
-      if (stack.length === 0) {
-        return undefined
-      }
-      return stack[stack.length - 1]
+      return array[array.length - 1]
     },
     get length() {
-      return stack.length
+      return array.length
     },
     isEmpty() {
-      return stack.length === 0
+      return array.length === 0
     }
+
   }
+  
+
 }
 
 const lowerBodyStack = createStack()
