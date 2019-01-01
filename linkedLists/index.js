@@ -24,18 +24,17 @@ function createLinkedList() {
       this.tail.next = node
       this.tail = node
       this.length++
-
-      return node
     },
 
     pop() {
-      if (this.isEmpty()) {
+      if(this.isEmpty()) {
         return null
       }
 
-      const node = this.tail
+      const node = this.tail 
+      
 
-      if (this.head === this.tail) {
+      if(this.head ===  this.tail) {
         this.head = null
         this.tail = null
         this.length--
@@ -44,6 +43,7 @@ function createLinkedList() {
 
       let current = this.head
       let penultimate
+
       while (current) {
         if (current.next === this.tail) {
           penultimate = current
@@ -61,7 +61,8 @@ function createLinkedList() {
     },
 
     get(index) {
-      if (index < 0 || index > this.length - 1) {
+      if (index < 0 || index > this.length - 1)
+      {
         return null
       }
 
@@ -71,16 +72,18 @@ function createLinkedList() {
 
       let current = this.head
       let i = 0
+
       while (i < index) {
         i++
         current = current.next
-      }
+      } 
 
       return current
     },
 
     delete(index) {
-      if (index < 0 || index > this.length - 1) {
+      if (index < 0 || index > this.length - 1)
+      { 
         return null
       }
 
@@ -94,7 +97,7 @@ function createLinkedList() {
       }
 
       let current = this.head
-      let previous
+      let previous 
       let i = 0
 
       while (i < index) {
